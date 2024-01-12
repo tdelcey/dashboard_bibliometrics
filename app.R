@@ -6,6 +6,8 @@ library(dplyr)
 library(data.table)
 library(DT)
 library(here)
+library(shiny)
+library(shinyWidgets)
 
 data_app <- "data"
 
