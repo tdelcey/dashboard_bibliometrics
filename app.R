@@ -62,7 +62,7 @@ ui <- fluidPage(
                div(style = "margin-top: 20px;"),
                mainPanel(
                  width = 12,  
-                 sliderTextInput(
+                 shinyWidgets::sliderTextInput(
                    "year",
                    "Select Year:",
                    choices = years,
