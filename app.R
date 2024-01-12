@@ -8,6 +8,7 @@ library(DT)
 library(here)
 library(shiny)
 library(shinyWidgets)
+library(ggiraph)
 
 data_app <- "data"
 
@@ -69,7 +70,7 @@ ui <- fluidPage(
                    selected = names(list_ggraph)[[1]]
                  ),
                  div(style = "margin-top: 20px;"),
-                 girafeOutput("network"),
+                 ggiraph::girafeOutput("network"),
                  tabPanel("Information on node selected", DTOutput("node_info"))
                  # other tabs
                )
