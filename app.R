@@ -10,9 +10,9 @@ library(here)
 data_app <- "data"
 
 # load and prepare data
-list_ggraph <- readRDS(here(data_app, "list_ggraph.rds"))
-tfidf_bigram <- readRDS(here(data_app, "tfidf_bigram.rds"))
-nodes_filtered <- readRDS(here(data_app, "nodes_filtered.rds")) 
+list_ggraph <- readRDS(here("list_ggraph.rds"))
+tfidf_bigram <- readRDS(here("tfidf_bigram.rds"))
+nodes_filtered <- readRDS(here("nodes_filtered.rds")) 
 
 # dashboard with shiny 
 
@@ -295,5 +295,4 @@ shiny::runApp(app)
 
 # rsconnect::deployApp( local_path_of_your_app )
 
-runGist("eb3470beb1c0252bd0289cbc89bcf36f")
-runGitHub( "<fama_1970>", "<tdelcey>", ref = "main")
+shiny::runGitHub( "dashboard_bibliometrics", "tdelcey", ref = "main")
